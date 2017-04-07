@@ -1,0 +1,25 @@
+{
+  "name": "image_renamer",
+  "version": "1.0.0",
+  "description": "Renames images in a sequence based on parent folder name",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "fs": "*",
+    "path": "*",
+    "zpad": "^0.5.0"
+  },
+  "bin": {
+    "renamer": "./bin/cli"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
+  }
+}

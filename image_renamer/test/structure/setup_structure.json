@@ -1,0 +1,122 @@
+{
+    "path": "test",
+    "name": "test",
+    "dir": "true",
+    "children": [
+        {
+            "path": "test/Test One",
+            "name": "Test One",
+            "dir": "true",
+            "children": [
+                {
+                    "path": "test/Test One/Image_one_bruce.gif",
+                    "name": "Image_one_bruce.gif",
+                    "size": 0,
+                    "extension": ".gif"
+                },
+                {
+                    "path": "test/Test One/test_Image_damn.JPG",
+                    "name": "test_Image_damn.JPG",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test One/test_image_blah.jpg",
+                    "name": "test_image_blah.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test One/test_image_crap.jpg",
+                    "name": "test_image_crap.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test One/test_two_butters.png",
+                    "name": "test_two_butters.png",
+                    "size": 0,
+                    "extension": ".png"
+                }
+            ],
+            "size": 0
+        },
+        {
+            "path": "test/Test Three (Test)",
+            "name": "Test Three (Test)",
+            "dir": "true",
+            "children": [
+                {
+                    "path": "test/Test Three (Test)/Image_one_bruce.gif",
+                    "name": "Image_one_bruce.gif",
+                    "size": 0,
+                    "extension": ".gif"
+                },
+                {
+                    "path": "test/Test Three (Test)/test_Image_damn.JPG",
+                    "name": "test_Image_damn.JPG",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test Three (Test)/test_image_blah.jpg",
+                    "name": "test_image_blah.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test Three (Test)/test_image_crap.jpg",
+                    "name": "test_image_crap.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test Three (Test)/test_two_butters.png",
+                    "name": "test_two_butters.png",
+                    "size": 0,
+                    "extension": ".png"
+                }
+            ],
+            "size": 0
+        },
+        {
+            "path": "test/Test Two",
+            "name": "Test Two",
+            "dir": "true",
+            "children": [
+                {
+                    "path": "test/Test Two/Image_one_bruce.gif",
+                    "name": "Image_one_bruce.gif",
+                    "size": 0,
+                    "extension": ".gif"
+                },
+                {
+                    "path": "test/Test Two/test_Image_damn.JPG",
+                    "name": "test_Image_damn.JPG",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test Two/test_image_blah.jpg",
+                    "name": "test_image_blah.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test Two/test_image_crap.jpg",
+                    "name": "test_image_crap.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test Two/test_two_butters.png",
+                    "name": "test_two_butters.png",
+                    "size": 0,
+                    "extension": ".png"
+                }
+            ],
+            "size": 0
+        }
+    ],
+    "size": 0
+}

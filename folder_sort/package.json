@@ -1,0 +1,19 @@
+{
+  "name": "folder_sort",
+  "version": "1.0.0",
+  "description": "Sorts folders based on domain prefix (ex test.com)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "mv": "^2.1.1",
+    "path": "^0.12.7"
+  },
+  "bin": {
+    "folderSort": "./index.js"
+  }
+}

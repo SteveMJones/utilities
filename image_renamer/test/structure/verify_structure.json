@@ -1,0 +1,118 @@
+{
+    "path": "test",
+    "name": "test",
+    "children": [
+        {
+            "path": "test/Test One",
+            "name": "Test One",
+            "children": [
+                {
+                    "path": "test/Test One/test_one_001.gif",
+                    "name": "test_one_001.gif",
+                    "size": 0,
+                    "extension": ".gif"
+                },
+                {
+                    "path": "test/Test One/test_one_002.jpg",
+                    "name": "test_one_002.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test One/test_one_003.jpg",
+                    "name": "test_one_003.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test One/test_one_004.jpg",
+                    "name": "test_one_004.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test One/test_one_005.png",
+                    "name": "test_one_005.png",
+                    "size": 0,
+                    "extension": ".png"
+                }
+            ],
+            "size": 0
+        },
+        {
+            "path": "test/Test Three",
+            "name": "Test Three",
+            "children": [
+                {
+                    "path": "test/Test Three/test_three_001.gif",
+                    "name": "test_three_001.gif",
+                    "size": 0,
+                    "extension": ".gif"
+                },
+                {
+                    "path": "test/Test Three/test_three_002.jpg",
+                    "name": "test_three_002.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test Three/test_three_003.jpg",
+                    "name": "test_three_003.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test Three/test_three_004.jpg",
+                    "name": "test_three_004.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test Three/test_three_005.png",
+                    "name": "test_three_005.png",
+                    "size": 0,
+                    "extension": ".png"
+                }
+            ],
+            "size": 0
+        },
+        {
+            "path": "test/Test Two",
+            "name": "Test Two",
+            "children": [
+                {
+                    "path": "test/Test Two/test_two_001.gif",
+                    "name": "test_two_001.gif",
+                    "size": 0,
+                    "extension": ".gif"
+                },
+                {
+                    "path": "test/Test Two/test_two_002.jpg",
+                    "name": "test_two_002.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test Two/test_two_003.jpg",
+                    "name": "test_two_003.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test Two/test_two_004.jpg",
+                    "name": "test_two_004.jpg",
+                    "size": 0,
+                    "extension": ".jpg"
+                },
+                {
+                    "path": "test/Test Two/test_two_005.png",
+                    "name": "test_two_005.png",
+                    "size": 0,
+                    "extension": ".png"
+                }
+            ],
+            "size": 0
+        }
+    ],
+    "size": 0
+}
