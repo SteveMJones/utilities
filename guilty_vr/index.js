@@ -76,5 +76,6 @@ fs.readdirSync(currDir).filter(function(file) {
                 processFile(file2, file1, false);
             }
         });
+        break;
     }
 });
