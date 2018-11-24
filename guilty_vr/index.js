@@ -1,40 +1,69 @@
 var fs = require('fs');
 var path = require('path');
 var mv = require('mv');
+var replaceall = require("replaceall");
 
-var currDir = process.cwd();
+//var currDir = process.cwd();
+var currDir = '/Volumes/28tb/Misc/VirtualReality/Oculus';
 
 var processFile = function(file, siteName, moveFile) {
     if(fs.statSync(file).isFile() && path.extname(file) == '.mp4') {
         var fileName = path.basename(file);
         var fileDir = path.dirname(file);
-        var parentDir = fileDir.split(path.sep).pop();
+        var parentDir = path.dirname(fileDir);
         var siteName = siteName.toLowerCase();
 
-        //lowercase whole filename
-        fileName = fileName.toLowerCase();
+        //trim extention
+        fileName = fileName.substring(0,fileName.indexOf('.mp4'));
 
         //clean suffix
         suffix = [];
         suffix.push('_180_180x180_3dh_LR');
-        suffix.push('_oculus_180_180x180_3dh_LR');
+        suffix.push('_180x180_3dh_LR');
+        suffix.push('_180_180x180_3dh_LR');
+        suffix.push('_UHD_180x180_3dh');
+        suffix.push(' UHD 180x180 3dh');
+        suffix.push('_180x180_3dh');
+        suffix.push('_3840_180_180x180_3dh_LR');
+        suffix.push('3840_180x180_3dh_LR');
+        suffix.push('_3840x1920');
+        suffix.push('_oculus');
+        suffix.push('_Oculus');
         suffix.push('.3d.sbs.180');
-        suffix.push('_5k_');
+        suffix.push('_5k');
+        suffix.push('_6K');
+        suffix.push('(4k)');
+        suffix.push('_hevc');
+        suffix.push('_vrdesktophd');
+        suffix.push(' Oculus Rift');
+        suffix.push('3200x1800');
 
-        for(val in suffix) {
+        suffix.forEach(function(val) {
             fileName = fileName.replace(val, '');
-        }
+        });
         
+        //console.log('suffix: ' + fileName);
+
         //clean special
         special = [];
+        special.push('-_-');
+        special.push(' - ');
         special.push('-');
         special.push('.');
         special.push(' ');
-        special.push('-_-');
+        special.push('__');
+        special.push('___');
         
-        for(val in special) {
-            fileName = fileName.replace(val, '_');
-        }
+        special.forEach(function(val) {
+            fileName = replaceall(val, '_', fileName);
+        });
+
+        //console.log('special: ' + fileName);
+
+        //lowercase name
+        fileName = fileName.toLowerCase();
+        
+        //console.log('lowercase: ' + fileName);
 
         //rename prefix
         if(fileName.indexOf(siteName) == -1) {
@@ -42,17 +71,18 @@ var processFile = function(file, siteName, moveFile) {
         }
 
         //add extra information
-        fileName = fileName.substring(0,fileName.indexOf('.mp4')) + '_180_sbs.mp4';
+        fileName = fileName + '_180_sbs.mp4';
 
-        console.log("Old Filename: " + path.basename(file) + ", New Filename: " + fileName);
+        var srcFile = file;
+        var dstFile = fileDir + path.sep + fileName;
 
-        /*
         if(moveFile) {
-            src = path.join(currDir, file);
-            dst = path.join(currDir,sortFolder,file);
-            mv(src, dst, {mkdirp: true}, function(err) {});
+            dstFile = parentDir + path.sep + fileName;
         }
-        */
+        
+        console.log("Renamimng " + srcFile + " to " + dstFile);
+
+        mv(srcFile, dstFile, {mkdirp: true}, function(err) {});
     }
 };
 
@@ -69,13 +99,14 @@ fs.readdirSync(currDir).filter(function(file) {
             if(fs.statSync(file2).isDirectory()) {
                 fs.readdirSync(file2).filter(function(file) {
                     file3 = path.join(file2, file);
-                    processFile(file3, file1, true);
+                    processFile(file3, path.basename(file1), true);
                 });
             }
             else {
-                processFile(file2, file1, false);
+                processFile(file2, path.basename(file1), false);
             }
         });
-        break;
     }
 });
+
+console.log("Done.");

@@ -11,7 +11,8 @@
   "dependencies": {
     "fs": "0.0.1-security",
     "mv": "^2.1.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "replaceall": "^0.1.6"
   },
   "bin": {
     "guiltyVR": "./index.js"
