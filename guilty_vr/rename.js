@@ -4,7 +4,7 @@ var mv = require('mv');
 var replaceall = require("replaceall");
 
 //var currDir = process.cwd();
-var currDir = '/Volumes/28tb/Misc/VirtualReality/Oculus';
+var currDir = '/Volumes/28tb/Misc/VirtualReality';
 
 var processFile = function(file, siteName, moveFile) {
     if(fs.statSync(file).isFile() && path.extname(file) == '.mp4') {
@@ -28,7 +28,10 @@ var processFile = function(file, siteName, moveFile) {
         suffix.push('3840_180x180_3dh_LR');
         suffix.push('_3840x1920');
         suffix.push('_180_180_sbs');
+        suffix.push('_a_xxx_parody');
+        suffix.push('_xxx_parody');
         suffix.push('_oculus');
+        suffix.push('_samsung');
         suffix.push('_Oculus');
         suffix.push('.3d.sbs.180');
         suffix.push('_5k');
@@ -36,10 +39,15 @@ var processFile = function(file, siteName, moveFile) {
         suffix.push('_4k');
         suffix.push('(4k)');
         suffix.push('_hevc');
+        suffix.push('_3dv');
+        suffix.push('_2968');
         suffix.push('_vrdesktophd');
         suffix.push(' Oculus Rift');
         suffix.push('_1600p_h264');
         suffix.push('_com');
+        suffix.push('_2160p');
+        suffix.push('_1920p');
+        suffix.push('_2300p');
         suffix.push('_h264');
         suffix.push('_h265');
         suffix.push('_3840');
@@ -103,24 +111,26 @@ var processFile = function(file, siteName, moveFile) {
 
 //Scan current directory
 fs.readdirSync(currDir).filter(function(file) {
-    file1 = path.join(currDir, file)
-    if(fs.statSync(file1).isDirectory()) {
-        
-        //Scan each folder
-        fs.readdirSync(file1).filter(function(file) {
+    if(file != '_Sort') {
+        file1 = path.join(currDir, file)
+        if(fs.statSync(file1).isDirectory()) {
+            
+            //Scan each folder
+            fs.readdirSync(file1).filter(function(file) {
 
-            //Could be other folders to scan
-            file2 = path.join(file1, file);
-            if(fs.statSync(file2).isDirectory()) {
-                fs.readdirSync(file2).filter(function(file) {
-                    file3 = path.join(file2, file);
-                    processFile(file3, path.basename(file1), true);
-                });
-            }
-            else {
-                processFile(file2, path.basename(file1), false);
-            }
-        });
+                //Could be other folders to scan
+                file2 = path.join(file1, file);
+                if(fs.statSync(file2).isDirectory()) {
+                    fs.readdirSync(file2).filter(function(file) {
+                        file3 = path.join(file2, file);
+                        processFile(file3, path.basename(file1), true);
+                    });
+                }
+                else {
+                    processFile(file2, path.basename(file1), false);
+                }
+            });
+        }
     }
 });
 

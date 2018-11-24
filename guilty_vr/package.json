@@ -2,7 +2,7 @@
   "name": "guilty_vr",
   "version": "1.0.0",
   "description": "Renames and sorts various VR video files",
-  "main": "index.js",
+  "main": "rename.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,8 +13,5 @@
     "mv": "^2.1.1",
     "path": "^0.12.7",
     "replaceall": "^0.1.6"
-  },
-  "bin": {
-    "guiltyVR": "./index.js"
   }
 }
