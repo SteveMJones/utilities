@@ -27,15 +27,22 @@ var processFile = function(file, siteName, moveFile) {
         suffix.push('_3840_180_180x180_3dh_LR');
         suffix.push('3840_180x180_3dh_LR');
         suffix.push('_3840x1920');
+        suffix.push('_180_180_sbs');
         suffix.push('_oculus');
         suffix.push('_Oculus');
         suffix.push('.3d.sbs.180');
         suffix.push('_5k');
         suffix.push('_6K');
+        suffix.push('_4k');
         suffix.push('(4k)');
         suffix.push('_hevc');
         suffix.push('_vrdesktophd');
         suffix.push(' Oculus Rift');
+        suffix.push('_1600p_h264');
+        suffix.push('_com');
+        suffix.push('_h264');
+        suffix.push('_h265');
+        suffix.push('_3840');
         suffix.push('3200x1800');
 
         suffix.forEach(function(val) {
@@ -71,7 +78,12 @@ var processFile = function(file, siteName, moveFile) {
         }
 
         //add extra information
-        fileName = fileName + '_180_sbs.mp4';
+        if(fileName.indexOf('_180_sbs') == -1) {
+            fileName = fileName + '_180_sbs.mp4';
+        }
+        else {
+            fileName = fileName + '.mp4';
+        }
 
         var srcFile = file;
         var dstFile = fileDir + path.sep + fileName;
@@ -80,9 +92,12 @@ var processFile = function(file, siteName, moveFile) {
             dstFile = parentDir + path.sep + fileName;
         }
         
-        console.log("Renamimng " + srcFile + " to " + dstFile);
+        if(srcFile != dstFile) {
+            console.log("SRC: " + srcFile);
+            console.log("DST: " + dstFile);
 
-        mv(srcFile, dstFile, {mkdirp: true}, function(err) {});
+            mv(srcFile, dstFile, {mkdirp: true}, function(err) {});
+        }
     }
 };
 
